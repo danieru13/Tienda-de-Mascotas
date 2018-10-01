@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="com.udea.mascotas" v="4.4" rws="_15383634905702" Pws="_15383634905702" cws="_15383634905702" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_15383634905701" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="TipoMascotaPK" abs="false" class="TipoMascota" v="true" xre="false" m="false" rootElement="_15383634905701" id="_1538363512595">
+        <jpa:ts e="true">
+            <jpa:a>_15383635130883</jpa:a>
+            <jpa:a>_15383636992547</jpa:a>
+        </jpa:ts>
+        <jpa:hc e="true">
+            <jpa:a>_15383635130883</jpa:a>
+        </jpa:hc>
+        <jpa:eq e="true">
+            <jpa:a>_15383635130883</jpa:a>
+        </jpa:eq>
+        <jpa:con am="PUBLIC" e="true">
+            <jpa:a>_15383635130883</jpa:a>
+            <jpa:a>_15383636992547</jpa:a>
+            <jpa:a>_153836461206816</jpa:a>
+        </jpa:con>
+        <jpa:con am="PUBLIC" e="true"/>
+        <jpa:ath>Daniel</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="tipoMascota" ft="false" id="_15383636992547">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede estar vacio"/>
+                </jpa:bv>
+                <jpa:column name="tipoMascota" unique="false" nullable="false" insertable="true" updatable="true" length="255"/>
+            </jpa:basic>
+            <jpa:one-to-many collection-type="java.util.List" connected-entity-id="_1538363519937" connected-attribute-id="_153836461202915" v="true" name="mascotas" id="_153836461206816"/>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" ui="false" id="_15383635130883">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede estar vacío"/>
+                </jpa:bv>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="true" name="TipoMascota.findAll">
+            <jpa:query>Select e from TipoMascota e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="true" name="TipoMascota.findByTipoMascota">
+            <jpa:query>Select t from TipoMascota t where t.tipoMascota=:tipoMascota</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="MascotaPK" abs="false" class="Mascota" v="true" xre="false" m="false" rootElement="_15383634905701" id="_1538363519937">
+        <jpa:ts e="true">
+            <jpa:a>_15383635199385</jpa:a>
+        </jpa:ts>
+        <jpa:hc e="true">
+            <jpa:a>_15383635199385</jpa:a>
+        </jpa:hc>
+        <jpa:eq e="true">
+            <jpa:a>_15383635199385</jpa:a>
+        </jpa:eq>
+        <jpa:con am="PUBLIC" e="true">
+            <jpa:a>_15383635199385</jpa:a>
+            <jpa:a>_15383638240218</jpa:a>
+            <jpa:a>_15383638297179</jpa:a>
+            <jpa:a>_153836385570910</jpa:a>
+            <jpa:a>_153836386370111</jpa:a>
+            <jpa:a>_153836387022112</jpa:a>
+            <jpa:a>_153836530017517</jpa:a>
+            <jpa:a>_153836461202915</jpa:a>
+        </jpa:con>
+        <jpa:con am="PUBLIC" e="true"/>
+        <jpa:ath>Daniel</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="nombreMascota" ft="false" id="_15383638240218">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede ser vacío"/>
+                </jpa:bv>
+                <jpa:column name="nombreMascota" unique="false" nullable="false" insertable="true" updatable="true" length="255"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="raza" ft="false" id="_15383638297179">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede ser vacío"/>
+                </jpa:bv>
+                <jpa:column name="raza" unique="false" nullable="false" insertable="true" updatable="true" length="255"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="cantidad" ft="false" id="_153836385570910">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede ser vacío"/>
+                    <jpa:mi v="0" m="Mínimo 0"/>
+                </jpa:bv>
+                <jpa:column name="cantidad" unique="false" nullable="false" insertable="true" updatable="true" precision="0"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="Double" v="true" xvt="" name="precio" ft="false" id="_153836386370111">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede ser vacío"/>
+                </jpa:bv>
+                <jpa:column name="precio" unique="false" nullable="false" insertable="true" updatable="true" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" xvt="" name="edad" ft="false" id="_153836387022112">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:bv>
+                    <jpa:nn m="No puede ser vacío"/>
+                    <jpa:mi v="0" m="Mínimo 0"/>
+                </jpa:bv>
+                <jpa:column name="edad" unique="false" nullable="false" insertable="true" updatable="true" precision="0"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="imagen" id="_153836530017517">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column name="imagen" unique="false" nullable="true" insertable="true" updatable="true" length="255"/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1538363512595" connected-attribute-id="_153836461206816" v="true" xvt="" name="tipoMascota" id="_153836461202915">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_15383635199385">
+                <jpa:xwm nil="false" req="false"/>
+                <jpa:xm nil="false" req="false"/>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Mascota.findAll">
+            <jpa:query>Select e from Mascota e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByNombreMascota">
+            <jpa:query>Select e from Mascota e where e.nombreMascota=:nombreMascota</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByRaza">
+            <jpa:query>Select e from Mascota e where e.raza=:raza</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByCantidad">
+            <jpa:query>Select m from Mascota m where m.cantidad=:cantidad</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByPrecio">
+            <jpa:query>Select m from Mascota m where m.precio=:precio</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByEdad">
+            <jpa:query>Select m from Mascota m where m.edad=:edad</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByTipoMascota">
+            <jpa:query>Select m from Mascota m where m.tipoMascota=:tipoMascota</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Mascota.findByImagen">
+            <jpa:query>Select m from Mascota m where m.imagen=:imagen</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_15383634905702">
+            <i ref="_1538363512595" x="139" y="101"/>
+            <i ref="_1538363519937" x="467" y="126"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
